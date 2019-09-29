@@ -1,0 +1,126 @@
+/* Variables */ 
+
+$color-accent: #fed136;
+$color-font-alt: #fff;
+$color-background: #f7f7f7;
+
+$font-family: 'Montserrat', sans-serif;
+$font-family-alt: 'Roboto', sans-serif;
+
+$transition: all 1s ease-in-out;
+
+/* Global */ 
+
+*, *::after *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-family;
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    
+}
+
+/* Navigation */ 
+
+.navigation {
+    display: flex;
+    
+
+}
+
+.navigation {
+    
+    list-style-type: none;
+
+
+    .container {
+        position: absolute;
+        z-index: 300;
+        left: 25%;
+        top: 5%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    li {
+        display: inline-block;
+        margin-right: 36px;
+
+        a {
+            text-decoration: none;
+            color: $color-font-alt;
+            font-size: 14px;
+            transition: $transition;
+
+            &:hover {
+                color: $color-accent;
+            }
+        }
+    }
+}
+
+/* Splash */ 
+
+.splash {
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://i.imgur.com/rJjviq7.png");
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    color: $color-font-alt;
+
+    h1 {
+        font-family: $font-family-alt;
+        font-size: 40px;
+        font-style: italic;
+        letter-spacing: -1px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 75px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -1.88px;
+        margin: 50px;
+    }
+
+    .btn-splash {
+        color: $color-font-alt;
+        text-decoration: none;
+        padding: 20px 50px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: $transition;
+        background: $color-accent;
+
+        &:hover {
+            background: $color-font-alt;
+            color: $color-accent;
+        }
+    }
+
+    &::after {
+        z-index: -100;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        content: '';
+        background: #000;
+        opacity: 0.5;
+    }
+}
