@@ -24,13 +24,15 @@ body {
   line-height: 75px;
   text-transform: uppercase;
   letter-spacing: -1px;
-  color: #000;
+  color: #222;
+  margin-bottom: 0;
 }
 
 .section-subtitle {
   font-size: 16px;
   font-style: italic;
   font-family: "Roboto", sans-serif;
+  margin-bottom: 100px;
 }
 
 /* Navigation */
@@ -63,7 +65,7 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 14px;
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 .navigation li a:hover {
@@ -113,7 +115,7 @@ body {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 700;
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
   background: #fed136;
 }
 
@@ -130,5 +132,72 @@ body {
   content: '';
   background: #000;
   opacity: 0.5;
+}
+
+/* Services */
+.services .container {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.services .container .services-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 100%;
+}
+
+.services-card {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center;
+  width: 300px;
+}
+
+.services-card .services-card-icon {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  color: #fed136;
+  border: 3px solid #fed136;
+  border-radius: 50%;
+  font-size: 40px;
+  width: 67px;
+  height: 67px;
+  transition: all 0.7s ease-in-out;
+}
+
+.services-card .services-card-icon:hover {
+  color: #fff;
+  background: #fed136;
+}
+
+.services-card .services-card-title {
+  color: #222;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 75px;
+  letter-spacing: -0.45px;
+  margin-bottom: 0;
+}
+
+.services-card .services-card-desc {
+  margin-top: 0;
+  font-size: 14px;
+  letter-spacing: -0.35px;
 }
 /*# sourceMappingURL=style.css.map */
