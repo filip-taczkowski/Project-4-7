@@ -183,7 +183,7 @@ section {
         color: $color-accent;
         border: 3px solid $color-accent;
         border-radius: 50%;
-        font-size: 40px;
+        font-size: 35px;
         width: 67px;
         height: 67px;
         transition: $transition;
@@ -272,4 +272,43 @@ section {
             background: $color-accent;
         }
     }
+}
+
+/* Footer */ 
+
+footer {
+    padding: 20px 0;
+
+    .container {
+        align-items: center;
+        position: relative;
+
+        .footer-icon-container {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;   
+            align-items: center;                 
+        }
+    }
+}
+
+.footer-title {
+    font-size: 14px;
+    letter-spacing: -0.35px;
+    line-height: 22px;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    padding: 5px;
+    background: #000;
+    color: $color-font-alt;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
 }

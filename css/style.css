@@ -16,7 +16,6 @@ section {
 }
 
 .container {
-  display: -ms-flexbox;
   display: flex;
   width: 1000px;
   margin: 0 auto;
@@ -41,7 +40,6 @@ section {
 
 /* Navigation */
 .navigation {
-  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
 }
@@ -51,10 +49,8 @@ section {
   z-index: 300;
   left: 25%;
   top: 5%;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation .container .nav-name:hover img {
@@ -80,14 +76,10 @@ section {
 /* Splash */
 .splash {
   z-index: 200;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url(/images/Background_Img.png);
   background-size: cover;
   height: 100vh;
@@ -141,46 +133,35 @@ section {
 
 /* Services */
 .services .container {
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
 .services .container .services-row {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  justify-content: space-between;
   width: 100%;
 }
 
 .services-card {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 300px;
 }
 
 .services-card .services-card-icon {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  align-items: center;
+  justify-content: center;
   color: #fed136;
   border: 3px solid #fed136;
   border-radius: 50%;
-  font-size: 40px;
+  font-size: 35px;
   width: 67px;
   height: 67px;
   transition: all 0.7s ease-in-out;
@@ -213,31 +194,24 @@ section {
 }
 
 .our-portfolio .container {
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
 .our-portfolio .container .portfolio-row {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
 }
 
 .portfolio-card {
   width: 300px;
   margin: 30px 15px;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
 }
 
 .portfolio-card img {
@@ -245,12 +219,9 @@ section {
 }
 
 .portfolio-card .portfolio-card-bottom {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
+  flex-direction: column;
+  align-items: center;
   background: #fff;
   transition: all 0.7s ease-in-out;
 }
@@ -278,4 +249,43 @@ section {
 .portfolio-card:hover .portfolio-card-bottom {
   background: #fed136;
 }
+
+/* Footer */
+footer {
+  padding: 20px 0;
+}
+
+footer .container {
+  align-items: center;
+  position: relative;
+}
+
+footer .container .footer-icon-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-title {
+  font-size: 14px;
+  letter-spacing: -0.35px;
+  line-height: 22px;
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  padding: 5px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+}
+
 /*# sourceMappingURL=style.css.map */
