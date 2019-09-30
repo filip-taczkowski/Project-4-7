@@ -83,7 +83,7 @@ body {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  background-image: url("https://i.imgur.com/rJjviq7.png");
+  background-image: url(/images/Background_Img.png);
   background-size: cover;
   height: 100vh;
   position: relative;
@@ -199,5 +199,21 @@ body {
   margin-top: 0;
   font-size: 14px;
   letter-spacing: -0.35px;
+}
+
+/* Our portfolio */
+.our-portfolio .container {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.our-portfolio .container .portfolio-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
