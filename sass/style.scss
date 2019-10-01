@@ -32,6 +32,14 @@ section {
     display: flex;
     width: 1000px;
     margin: 0 auto;
+
+    @media (max-width: 576px)  {
+        width: 100vw;
+    }
+
+    @media (max-width: 1200px) {
+        width: 100vw;
+    }
     
 }
 
@@ -73,6 +81,18 @@ section {
                 filter: blur(1px)
             }
         }
+
+        @media (max-width: 576px) {
+            left: 0;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 1200px) {
+            left: 0;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     li {
@@ -110,6 +130,7 @@ section {
         font-family: $font-family-alt;
         font-size: 40px;
         font-style: italic;
+        text-align: center;
         letter-spacing: -1px;
         margin: 0;
     }
@@ -120,6 +141,7 @@ section {
         text-transform: uppercase;
         letter-spacing: -1.88px;
         margin: 50px;
+        text-align: center;
     }
 
     .btn-splash {
@@ -164,6 +186,11 @@ section {
             display: flex;
             justify-content: space-between;
             width: 100%;
+
+            @media (max-width: 576px) {
+                flex-direction: column;
+                align-items: center;           
+            }
         }
     }
 }
@@ -175,6 +202,7 @@ section {
     align-items: center;
     text-align: center;
     width: 300px;
+    margin: 20px 10px;
 
     .services-card-icon {
         display: flex;
@@ -202,6 +230,7 @@ section {
         line-height: 75px;
         letter-spacing: -0.45px;
         margin-bottom: 0;
+        margin-top: 0;
     }
 
     .services-card-desc {
@@ -220,14 +249,21 @@ section {
     .container {
         flex-direction: column;
         align-items: center;
+        flex-wrap: wrap;
         margin-top: 100px;
         margin-bottom: 100px;
 
         .portfolio-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: flex;  
+            flex-wrap: wrap;         
+            justify-content: space-around;
             width: 100%;
+
+            @media (max-width: 576px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
         }
     }    
 }
@@ -237,6 +273,8 @@ section {
     margin: 30px 15px;
     display: flex;
     flex-direction: column;
+    transition: $transition;
+
     img {
         width: 100%;
     }
@@ -267,6 +305,7 @@ section {
 
     &:hover {
         cursor: pointer;
+        border: 1px solid $color-accent;
 
         .portfolio-card-bottom {
             background: $color-accent;
@@ -283,32 +322,50 @@ footer {
         align-items: center;
         position: relative;
 
+        .footer-title {
+            font-size: 14px;
+            letter-spacing: -0.35px;
+            line-height: 22px;
+        }
+
         .footer-icon-container {
             position: absolute;
             width: 100%;
             display: flex;
             justify-content: center;   
-            align-items: center;                 
+            align-items: center;    
+            
+            .footer-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 20px;
+                padding: 5px;
+                background: #000;
+                color: $color-font-alt;
+                border-radius: 50%;
+                font-size: 20px;
+                width: 30px;
+                height: 30px;
+                transition: $transition;
+
+                &:hover {
+                    background: $color-accent;
+                    color: #000;
+                }
+            }
+
+            @media (max-width: 576px) {
+                position: static;
+            }
+            
+        }
+        @media (max-width: 576px) {
+            flex-direction: column;
+            position: static;
         }
     }
 }
 
-.footer-title {
-    font-size: 14px;
-    letter-spacing: -0.35px;
-    line-height: 22px;
-}
 
-.footer-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    padding: 5px;
-    background: #000;
-    color: $color-font-alt;
-    border-radius: 50%;
-    font-size: 20px;
-    width: 30px;
-    height: 30px;
-}
+

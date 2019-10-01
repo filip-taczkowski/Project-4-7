@@ -16,9 +16,22 @@ section {
 }
 
 .container {
+  display: -ms-flexbox;
   display: flex;
   width: 1000px;
   margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100vw;
+  }
 }
 
 .section-title {
@@ -40,6 +53,7 @@ section {
 
 /* Navigation */
 .navigation {
+  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
 }
@@ -49,12 +63,34 @@ section {
   z-index: 300;
   left: 25%;
   top: 5%;
-  justify-content: space-between;
-  align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .navigation .container .nav-name:hover img {
   filter: blur(1px);
+}
+
+@media (max-width: 576px) {
+  .navigation .container {
+    left: 0;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navigation .container {
+    left: 0;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
 }
 
 .navigation li {
@@ -76,10 +112,14 @@ section {
 /* Splash */
 .splash {
   z-index: 200;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   background-image: url(/images/Background_Img.png);
   background-size: cover;
   height: 100vh;
@@ -91,6 +131,7 @@ section {
   font-family: "Roboto", sans-serif;
   font-size: 40px;
   font-style: italic;
+  text-align: center;
   letter-spacing: -1px;
   margin: 0;
 }
@@ -101,6 +142,7 @@ section {
   text-transform: uppercase;
   letter-spacing: -1.88px;
   margin: 50px;
+  text-align: center;
 }
 
 .splash .btn-splash {
@@ -133,31 +175,52 @@ section {
 
 /* Services */
 .services .container {
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
 .services .container .services-row {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   width: 100%;
 }
 
+@media (max-width: 576px) {
+  .services .container .services-row {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+}
+
 .services-card {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   text-align: center;
   width: 300px;
+  margin: 20px 10px;
 }
 
 .services-card .services-card-icon {
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   color: #fed136;
   border: 3px solid #fed136;
   border-radius: 50%;
@@ -180,6 +243,7 @@ section {
   line-height: 75px;
   letter-spacing: -0.45px;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .services-card .services-card-desc {
@@ -194,24 +258,43 @@ section {
 }
 
 .our-portfolio .container {
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
 .our-portfolio .container .portfolio-row {
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
+}
+
+@media (max-width: 576px) {
+  .our-portfolio .container .portfolio-row {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+  }
 }
 
 .portfolio-card {
   width: 300px;
   margin: 30px 15px;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  transition: all 0.7s ease-in-out;
 }
 
 .portfolio-card img {
@@ -219,9 +302,12 @@ section {
 }
 
 .portfolio-card .portfolio-card-bottom {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   background: #fff;
   transition: all 0.7s ease-in-out;
 }
@@ -244,6 +330,7 @@ section {
 
 .portfolio-card:hover {
   cursor: pointer;
+  border: 1px solid #fed136;
 }
 
 .portfolio-card:hover .portfolio-card-bottom {
@@ -256,28 +343,35 @@ footer {
 }
 
 footer .container {
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   position: relative;
 }
 
-footer .container .footer-icon-container {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-title {
+footer .container .footer-title {
   font-size: 14px;
   letter-spacing: -0.35px;
   line-height: 22px;
 }
 
-.footer-icon {
+footer .container .footer-icon-container {
+  position: absolute;
+  width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+footer .container .footer-icon-container .footer-icon {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   margin-right: 20px;
   padding: 5px;
   background: #000;
@@ -286,6 +380,25 @@ footer .container .footer-icon-container {
   font-size: 20px;
   width: 30px;
   height: 30px;
+  transition: all 0.7s ease-in-out;
 }
 
+footer .container .footer-icon-container .footer-icon:hover {
+  background: #fed136;
+  color: #000;
+}
+
+@media (max-width: 576px) {
+  footer .container .footer-icon-container {
+    position: static;
+  }
+}
+
+@media (max-width: 576px) {
+  footer .container {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    position: static;
+  }
+}
 /*# sourceMappingURL=style.css.map */
